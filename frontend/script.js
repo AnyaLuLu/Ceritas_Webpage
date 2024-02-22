@@ -8,19 +8,20 @@ function createQuestionRow(question, index, options) {
         </td>
     `).join('');
     return tr;
-  }
+}
   
-  // Function to initialize the questionnaire
-  function initializeQuestionnaire(questions, options) {
+// Function to initialize the questionnaire
+function initializeQuestionnaire(questions, options) {
     const surveyTable = document.getElementById('surveyTable');
     questions.forEach((question, index) => {
-      const questionRow = createQuestionRow(question, index, options);
-      surveyTable.appendChild(questionRow);
+        const questionRow = createQuestionRow(question, index, options);
+        surveyTable.appendChild(questionRow);
     });
-  }
+}
   
-  // Function to handle form submission
-  function handleFormSubmission(event) {
+// Function to handle form submission
+function handleFormSubmission(event) {
+    console.log("Hello");
     event.preventDefault();
     const formData = new FormData(event.target);
     const data = {};
@@ -28,22 +29,35 @@ function createQuestionRow(question, index, options) {
         data[key] = value;
     }
     console.log(data);
-    // Here you would send the data to the backend
-  }
+    
+    // Send the form data to the server
+    fetch('http://localhost:3000/submit-answers', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+    })
+    .then(response => response.text())
+    .then(data => console.log(data))
+    .catch((error) => console.error('Error:', error));
+
+}
   
-  // Main function to set up the questionnaire
-  function setupQuestionnaire() {
+// Main function to set up the questionnaire
+function setupQuestionnaire() {
     const questions = [
-      'How does the product look?',
-      'How are you feeling today?'
-      // ... Add all your questions here
+        'How does the product look?',
+        'How are you feeling today?'
+        // ... Add all your questions here
     ];
     const options = ['Strongly Agree', 'Agree', 'Neutral', 'Disagree', 'Strongly Disagree'];
-  
     initializeQuestionnaire(questions, options);
-    document.getElementById('surveyForm').addEventListener('submit', handleFormSubmission);
-  }
+}
   
-  // Call the main function after the DOM is fully loaded
-  document.addEventListener('DOMContentLoaded', setupQuestionnaire);
+// Call the main function after the DOM is fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+    setupQuestionnaire();
+    document.getElementById('surveyForm').addEventListener('submit', handleFormSubmission);
+});
   
