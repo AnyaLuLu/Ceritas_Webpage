@@ -1,9 +1,50 @@
 body {
     font-family: Arial, sans-serif;
-    padding: 20px;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
     background-color: #f4f4f4;
 }
 
+/*** Headers ***/
+.curved-header {
+    background-color: #326273; /* Header colour */
+    text-align: center; /* Center the text inside the header */
+    position: relative;
+    color: white; /* Text colour */
+    margin-bottom: 10vh; /* Adds some space between the header and the form */
+    height: 70vh;
+    z-index: 0;
+}
+
+.curved-header::after {
+    content: '';
+    position: absolute;
+    bottom: -10%;
+    left: 0;
+    width: 100%;
+    height: 20%; /* Increase the height to make the curve more prominent */
+    background: inherit;
+    border-radius: 50%; /* Increase the percentage to make a larger curve */
+    z-index: -1;
+}
+
+.profile-card {
+    position: absolute;
+    background-color: white; /* Card background colour */
+    border-top-left-radius: 50% 33%;
+    border-top-right-radius: 50% 33%;
+    border-bottom-left-radius: 15%;
+    border-bottom-right-radius: 15%;
+    width: 20%;
+    height: 75%;
+    z-index: 1;
+    margin-left: 15%;
+    margin-top: 5%;
+}
+
+/*** Question Table ***/
 table {
     width: 100%;
     border-collapse: collapse;
