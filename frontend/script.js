@@ -1,14 +1,17 @@
 // Function to create a single question row
 function createQuestionRow(question, index, options) {
     const tr = document.createElement('tr');
-    tr.innerHTML = `<td>${question}</td>` + options.map((option, optionIndex) => `
-        <td>
-            <input type="radio" name="question${index}" value="${option}" id="q${index}o${optionIndex}">
-            <label for="q${index}o${optionIndex}">${option}</label>
-        </td>
-    `).join('');
+    // Add a hidden input to store the question text
+    tr.innerHTML = `<td><input type="hidden" name="q${index}" value="${question}">${question}</td>` +
+        options.map((option, optionIndex) => `
+            <td>
+                <input type="radio" name="a${index}" value="${option}" id="q${index}o${optionIndex}">
+                <label for="q${index}o${optionIndex}">${option}</label>
+            </td>
+        `).join('');
     return tr;
 }
+
   
 // Function to initialize the questionnaire
 function initializeQuestionnaire(questions, options) {
