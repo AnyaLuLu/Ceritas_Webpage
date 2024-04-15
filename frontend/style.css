@@ -1,10 +1,18 @@
+:root{
+    --ceritas-navy: #326273;
+    --ceritas-green: #BFD3C1;
+    --ceritas-beige: #FFF9F3;
+    --ceritas-yellow: #F7EF81;
+    --ceritas-blue: #0090C1;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     height: 100%;
     width: 100%;
-    background-color: #f4f4f4;
+    background-color: var(--ceritas-navy);
 }
 
 /*** Headers ***/
