@@ -4,6 +4,7 @@
     --ceritas-beige: #FFF9F3;
     --ceritas-yellow: #F7EF81;
     --ceritas-blue: #0090C1;
+    --ceritas-softgreen: #82c27d;
 }
 
 body {
@@ -14,13 +15,30 @@ body {
     width: 100%;
     background-color: var(--ceritas-navy);
 }
+/*** Progress Bar ***/
+#progress-bar-container {
+    width: 90vw;
+    background-color: var(--ceritas-beige);
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(222, 29, 29, 0.1); /* Adds a subtle shadow for depth */
+    margin-bottom: 5vh; /* Spacing below the progress bar */
+    margin:auto;
+    margin-top: 5vh;
+}
 
+#progress-bar {
+    height: 2vh;
+    background-color: var(--ceritas-softgreen);
+    width: 0%; /* Initial state of the progress bar */
+    border-radius: 1px; /* Slightly rounded corners for the progress bar */
+    transition: width 0.4s ease-in-out; /* Smooth transition for width changes */
+}
 /*** Headers ***/
 .curved-header {
     background-color: #326273; /* Header colour */
     text-align: center; /* Center the text inside the header */
     position: relative;
-    color: white; /* Text colour */
+    color: rgba(255, 255, 255, 0.594); /* Text colour */
     margin-bottom: 10vh; /* Adds some space between the header and the form */
     height: 70vh;
     z-index: 0;

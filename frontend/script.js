@@ -1,11 +1,11 @@
-// Function to create a single question row
+// 4. Function to create a single question row
 function createQuestionRow(question, index, options) {
     const tr = document.createElement('tr');
     // Add a hidden input to store the question text
     tr.innerHTML = `<td><input type="hidden" name="q${index}" value="${question}">${question}</td>` +
         options.map((option, optionIndex) => `
             <td>
-                <input type="radio" name="a${index}" value="${option}" id="q${index}o${optionIndex}">
+                <input type="radio" name="a${index}" value="${option}" id="q${index}o${optionIndex}" onchange="updateProgressBar()">
                 <label for="q${index}o${optionIndex}">${option}</label>
             </td>
         `).join('');
@@ -13,15 +13,18 @@ function createQuestionRow(question, index, options) {
 }
 
   
-// Function to initialize the questionnaire
+// 3. Function to initialize the questionnaire
 function initializeQuestionnaire(questions, options) {
     const surveyTable = document.getElementById('surveyTable');
     questions.forEach((question, index) => {
         const questionRow = createQuestionRow(question, index, options);
         surveyTable.appendChild(questionRow);
     });
+    updateProgressBar(); //set's the progress bar to 0%
 }
-  
+ 
+
+
 // Function to handle form submission
 function handleFormSubmission(event) {
     console.log("Hello");
@@ -47,7 +50,7 @@ function handleFormSubmission(event) {
 
 }
   
-// Main function to set up the questionnaire
+// 2. Main function to set up the questionnaire
 function setupQuestionnaire() {
     const questions = [
         'How does the product look?',
@@ -58,9 +61,22 @@ function setupQuestionnaire() {
     initializeQuestionnaire(questions, options);
 }
   
-// Call the main function after the DOM is fully loaded
+// 1. Call the main function after the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', function() {
     setupQuestionnaire();
     document.getElementById('surveyForm').addEventListener('submit', handleFormSubmission);
+    
 });
-  
+
+// Update progress bar
+function updateProgressBar() {
+    const questions = document.querySelectorAll('#surveyTable tr');
+    let answeredQuestions = 0;
+    questions.forEach(question => {
+        if (question.querySelector('input[type="radio"]:checked')) {
+            answeredQuestions++;
+        }
+    });
+    const progressPercentage = (answeredQuestions / questions.length) * 100;
+    document.getElementById('progress-bar').style.width = progressPercentage + '%';
+}
