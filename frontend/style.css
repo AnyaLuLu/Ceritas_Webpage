@@ -16,10 +16,25 @@ body {
     background-color: var(--ceritas-navy);
 }
 /*** Progress Bar ***/
+.container {
+    position: relative; /* Allows absolute positioning inside */
+    width: 100%; /* Adjust based on your requirements */
+    height: 50px; /* Adjust based on your requirements */
+    padding-bottom: 5vh;
+}
+.overlay-image {
+    position: absolute; /* Position relative to the nearest positioned ancestor */
+    left: 0; /* Align to the left of the container */
+    top: 0; /* Align to the top of the container */
+    width: 100px; /* Adjust based on your image size */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 2; /* Ensures it overlaps the progress bar */
+}
+
 #progress-bar-container {
     width: 90vw;
     background-color: var(--ceritas-beige);
-    border-radius: 5px;
+    border-radius: 20px;
     box-shadow: 0 2px 4px rgba(222, 29, 29, 0.1); /* Adds a subtle shadow for depth */
     margin-bottom: 5vh; /* Spacing below the progress bar */
     margin:auto;
@@ -30,7 +45,7 @@ body {
     height: 2vh;
     background-color: var(--ceritas-softgreen);
     width: 0%; /* Initial state of the progress bar */
-    border-radius: 1px; /* Slightly rounded corners for the progress bar */
+    border-radius: 20px; /* Slightly rounded corners for the progress bar */
     transition: width 0.4s ease-in-out; /* Smooth transition for width changes */
 }
 /*** Headers ***/
