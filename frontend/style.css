@@ -15,6 +15,65 @@ body {
     width: 100%;
     background-color: var(--ceritas-navy);
 }
+
+/* General body styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+}
+
+/* Header and navigation styles */
+header {
+    background: var(--ceritas-navy);
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul .logo {
+    float: left;
+    margin-right: 20px;
+}
+
+nav ul .logo img {
+    vertical-align: middle;
+    width: 10vw; /* 10% of the viewport width */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Main content area */
+main {
+    background: var(--ceritas-navy);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #333;
+    color: white;
+}
+
+
 /*** Progress Bar ***/
 .container {
     position: relative; /* Allows absolute positioning inside */
