@@ -16,51 +16,42 @@ body {
     background-color: var(--ceritas-navy);
 }
 
-/* General body styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #f4f4f4;
-}
 
 /* Header and navigation styles */
-header {
-    background: var(--ceritas-navy);
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
+.navigation-bar {
+    width: 100%; 
+    height: 13vw; /* change it to desired width */
+    background-color: var(--ceritas-navy); /* change to desired color */
 }
-
-nav ul .logo {
-    float: left;
-    margin-right: 20px;
+.logo {
+    display: inline-block;
+    vertical-align: top;
+    width: 9vw;
+    height: 9vw;
+    margin-left: 1.5vw;
+    margin-top: 1.5vw;    /* if you want it vertically middle of the navbar. */
 }
-
-nav ul .logo img {
-    vertical-align: middle;
-    width: 10vw; /* 10% of the viewport width */
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 10px;
-}
-
-nav ul li a {
+.navigation-bar .company-name{
+    margin-right: 4vw;
+    font-size: 3em;
     color: white;
+}
+.navigation-bar a {
+    display: inline-block;
+    color: white;
+    vertical-align:top;
+    margin-right: 2vw;
+    height: 13vw;        /* if you want it to take the full height of the bar */
+    line-height: 13vw;    /* if you want it vertically middle of the navbar */
     text-decoration: none;
 }
+.navigation-bar a:hover{
+    color: var(--ceritas-blue)
+}
+
 
 /* Main content area */
 main {
-    background: var(--ceritas-navy);
-    color: #fff;
     padding: 20px;
     text-align: center;
 }
@@ -69,9 +60,10 @@ main {
 footer {
     text-align: center;
     padding: 10px 0;
-    background: #333;
+    background: #2E5266; /* Same as header */
     color: white;
 }
+
 
 
 /*** Progress Bar ***/
