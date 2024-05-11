@@ -20,7 +20,7 @@ body {
 /* Header and navigation styles */
 .navigation-bar {
     width: 100%; 
-    height: 13vw; /* change it to desired width */
+    height: 20vh; /* change it to desired width */
     background-color: var(--ceritas-navy); /* change to desired color */
 }
 .logo {
@@ -52,9 +52,50 @@ body {
 
 /* Main content area */
 main {
-    padding: 20px;
     text-align: center;
 }
+
+button {
+    background-color: var(--ceritas-green);
+    border: none;
+    padding: 12px 30px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 30px;
+    color: white;
+}
+
+button:hover {
+    background-color: #9fb492; /* Darker shade of button color on hover */
+}
+
+
+/* Landing Page */
+.landing-intro {
+    color: #ffffff;
+    text-align: center;
+    height: 80vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Kumbh Sans';
+}
+
+.landing-intro-text{
+    padding-left: 10vw;
+}
+
+.landing-intro h1{
+    width: 30vw;
+}
+
+img {
+    margin-top: 5vh;
+    width: 30vw; /* Adjust size as needed */
+}
+
 
 /* Footer */
 footer {
@@ -62,7 +103,6 @@ footer {
     padding: 10px 0;
     background: #2E5266; /* Same as header */
     color: white;
-    position: fixed;
     bottom: 0;
     width: 100%;
 }
@@ -160,16 +200,3 @@ td:first-child {
     text-align: left;
 }
 
-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #5cb85c;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #4cae4c;
-}
