@@ -8,7 +8,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Kumbh Sans';
     margin: 0;
     padding: 0;
     height: 100%;
@@ -80,7 +80,6 @@ button:hover {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    font-family: 'Kumbh Sans';
 }
 
 .landing-intro-text{
@@ -91,10 +90,91 @@ button:hover {
     width: 30vw;
 }
 
-img {
+.landing-intro-dork  {
     margin-top: 5vh;
     width: 30vw; /* Adjust size as needed */
 }
+
+.steps {
+    height: 100vh;
+    background-color: var(--ceritas-beige);
+    position: relative;
+    color: black;
+    padding: 10vh 10vw 10vh 10vw;
+}
+
+.dotted-path{
+    position: absolute;
+    width: 40%;
+    height: 35%; 
+    top: 25%;
+    left: 32%;
+    margin-top: 20px;
+}
+
+.step1{
+    position: absolute;
+    width: 25%;
+    top: 25%;
+    left: 15%;
+}
+.step1 h2{
+    margin-top: 30%;
+}
+
+.step2{
+    position: absolute;
+    width: 25%;
+    top: 40%;
+    left: 63%;
+}
+.step2 h2{
+    margin-top: 30%;
+}
+
+.step3{
+    position: absolute;
+    width: 25%;
+    top: 67%;
+    left: 38%;
+}
+.step3 h2{
+    margin-top: 30%;
+}
+
+.circle{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    margin-top: -30px;
+    margin-left: -30px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    font-size: 1.7em;
+    font-weight: bold;
+    color: var(--ceritas-beige);
+    text-align: center;
+    background: var(--ceritas-green);
+}
+
+
+/* .circle1 {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: 25%;
+    top: 25%;
+    line-height: 60px;
+    border-radius: 50%;
+    font-size: 1.7em;
+    font-weight: bold;
+    color: var(--ceritas-beige);
+    text-align: center;
+    background: var(--ceritas-green);
+} */
+
 
 
 /* Footer */
@@ -199,4 +279,3 @@ th {
 td:first-child {
     text-align: left;
 }
-
