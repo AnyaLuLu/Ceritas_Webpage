@@ -3,16 +3,15 @@
     --ceritas-green: #BFD3C1;
     --ceritas-beige: #FFF9F3;
     --ceritas-yellow: #F7EF81;
-    --ceritas-blue: #0090C1;
+    --ceritas-blue: #EAF5F6;
     --ceritas-softgreen: #82c27d;
 }
 
 body {
     font-family: 'Kumbh Sans';
-    margin: 0;
-    padding: 0;
     height: 100%;
     width: 100%;
+    margin: 0;
     background-color: var(--ceritas-navy);
 }
 
@@ -49,12 +48,6 @@ body {
     color: var(--ceritas-blue)
 }
 
-
-/* Main content area */
-main {
-    text-align: center;
-}
-
 button {
     background-color: var(--ceritas-green);
     border: none;
@@ -70,6 +63,9 @@ button:hover {
     background-color: #9fb492; /* Darker shade of button color on hover */
 }
 
+main {
+    text-align: center;
+}
 
 /* Landing Page */
 .landing-intro {
@@ -107,9 +103,8 @@ button:hover {
     position: absolute;
     width: 40%;
     height: 35%; 
-    top: 25%;
+    top: 26%;
     left: 32%;
-    margin-top: 20px;
 }
 
 .step1{
@@ -159,21 +154,35 @@ button:hover {
     background: var(--ceritas-green);
 }
 
+.test-preview {
+    position: relative;
+    color: white;
+    padding-top: 5%;
+}
+.stat-info{
+    padding-top: 5%;
+    padding-left: 50%;
+    width: 40%;
+    margin-bottom: 5%;
+}
+.took-test{
+    height: 30%;
+    background-color: var(--ceritas-blue);
+    color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5% 0% 5% 0%;
+}
 
-/* .circle1 {
+.stat-window{
     position: absolute;
-    width: 60px;
-    height: 60px;
-    left: 25%;
-    top: 25%;
-    line-height: 60px;
-    border-radius: 50%;
-    font-size: 1.7em;
-    font-weight: bold;
-    color: var(--ceritas-beige);
-    text-align: center;
-    background: var(--ceritas-green);
-} */
+    left: 10%;
+    top: 15%;
+    height: 60%;
+}
+
+
 
 
 
