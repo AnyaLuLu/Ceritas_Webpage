@@ -15,6 +15,9 @@ body {
     margin: 0;
     background-color: var(--ceritas-navy);
 }
+a{
+    text-decoration: none;
+}
 
 
 /* Header and navigation styles */
@@ -260,7 +263,6 @@ main {
 
 /* Footer */
 footer {
-    position: fixed;
     text-align: center;
     padding: 10px 0;
     background: #2E5266; /* Same as header */
