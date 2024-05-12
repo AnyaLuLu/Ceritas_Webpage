@@ -181,22 +181,69 @@ button:hover {
 .AboutUs-intro-container {
     color: #ffffff;
     text-align: center;
-    height: 20vh;
+    height: 50vh;
+    width: 100vw;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
     font-family: 'Kumbh Sans', sans-serif;
+    margin: auto;
+    width: 50%;
 }
 
 .AboutUs-intro-back {
-    width: 100%; /* Make the image expand to cover the container */
-    height: 100%; /* Adjust height to match the container, maintaining aspect ratio might require different settings */
+     /* Make the image expand to cover the container */
+    height: 60vh; /* Adjust height to match the container, maintaining aspect ratio might require different settings */
     object-fit: cover; /* Ensures the image covers the area without stretching */
+    position: absolute;
+    
 }
 
+.AboutUs-intro-text {
+    position: absolute; /* Positioning relative to the nearest positioned ancestor */
+    top: 0; /* Align to the top of the container */
+    left: 0; /* Align to the left of the container */
+    right: 0; /* Align to the right of the container */
+    bottom: 0; /* Align to the bottom of the container */
+    display: flex; /* Enables the use of flexbox properties below */
+    align-items: center; /* Center the text vertically */
+    justify-content: center; /* Center the text horizontally */
+    color: #ffffff; /* Set the text color */
+    text-align: center; /* Ensure text is centered */    
+}
 
+.AboutUs-welcome-duck {
+    width: 10vw;
+    padding-left: 5vw;
+    position: absolute;
+    right: 10vw;
+}
+.AboutUs-features-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center items horizontally */
+    align-items: flex-start; /* Align items from the top */
+    gap: 20px; /* Space between each feature */
+    padding: 20px; /* Padding around the container */
+    
+}
 
+.feature {
+    display: flex;
+    flex-direction: column; /* Stack icon and text vertically */
+    align-items: center; /* Center-align items */
+    width: 200px; /* Width of each feature */
+    text-align: center; /* Center text alignment */
+    color: white; /* Text color */
+    font-family: Arial, sans-serif; /* Font style */
+}
+
+.feature img {
+    width: 50px; /* Icon size */
+    margin-bottom: 10px; /* Space between icon and text */
+}
 
 
 
