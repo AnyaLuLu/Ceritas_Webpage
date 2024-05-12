@@ -5,6 +5,7 @@
     --ceritas-yellow: #F7EF81;
     --ceritas-blue: #0090C1;
     --ceritas-softgreen: #82c27d;
+    --ceritas-standoutgreen: #82C27D;
 }
 
 body {
@@ -56,7 +57,7 @@ main {
 }
 
 button {
-    background-color: var(--ceritas-green);
+    background-color: var(--ceritas-standoutgreen);
     border: none;
     padding: 12px 30px;
     margin-top: 20px;
@@ -67,7 +68,7 @@ button {
 }
 
 button:hover {
-    background-color: #9fb492; /* Darker shade of button color on hover */
+    background-color: var(--ceritas-green); /* Darker shade of button color on hover */
 }
 
 
@@ -175,10 +176,35 @@ button:hover {
     background: var(--ceritas-green);
 } */
 
+/*--------------------AboutUsPage----------------*/
+
+.AboutUs-intro-container {
+    color: #ffffff;
+    text-align: center;
+    height: 20vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.AboutUs-intro-back {
+    width: 100%; /* Make the image expand to cover the container */
+    height: 100%; /* Adjust height to match the container, maintaining aspect ratio might require different settings */
+    object-fit: cover; /* Ensures the image covers the area without stretching */
+}
+
+
+
+
+
+
 
 
 /* Footer */
 footer {
+    position: fixed;
     text-align: center;
     padding: 10px 0;
     background: #2E5266; /* Same as header */
