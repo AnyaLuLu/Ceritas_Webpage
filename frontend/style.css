@@ -237,11 +237,12 @@ main {
     justify-content: center; /* Center the text horizontally */
     color: #ffffff; /* Set the text color */
     text-align: center; /* Ensure text is centered */   
+    font-size: 1.3vw;
 }
 
 .AboutUs-welcome-duck {
-    width: 10vw;
-    padding-left: 5vw;
+    width: 20vw;
+    padding-left: 15vw;
     position: absolute;
     right: 10vw;
 }
@@ -259,21 +260,83 @@ main {
     display: flex;
     flex-direction: column; /* Stack icon and text vertically */
     align-items: center; /* Center-align items */
-    width: 200px; /* Width of each feature */
+    width: 20vw; /* Width of each feature */
     text-align: center; /* Center text alignment */
     color: white; /* Text color */
     font-family: Arial, sans-serif; /* Font style */
+    padding-top: 5vh;
+    font-size: 1.5vw;
 }
 
 .feature img {
-    width: 50px; /* Icon size */
-    margin-bottom: 10px; /* Space between icon and text */
+    width: 8vw; /* Icon size */
+    margin-bottom: 3vh; /* Space between icon and text */
 }
 
+.AboutUs-inspiration-container {
+    text-align: center;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Kumbh Sans', sans-serif;
+    margin: auto;
+    padding-top: 5vh;
+}
 
+.AboutUs-inspiration-back {
+     /* Make the image expand to cover the container */
+     width: 20vw; /* Adjust height to match the container, maintaining aspect ratio might require different settings */
+     object-fit: cover; /* Ensures the image covers the area without stretching */
+     position: absolute;
+     top:auto;
+     
+     
+}
+.AboutUs-inspiration-title h1{
+   
+    display: flex; /* Enables the use of flexbox properties below */
+    align-items: center; /* Center the text vertically */
+    justify-content: center; /* Center the text horizontally */
+    color: #ffffff; /* Set the text color */
+    text-align: center; /* Ensure text is centered */
+    font-size: 3vw;   
+    margin:auto;
 
+    
+}
 
+.AboutUs-quote-container {
+    width: 50vw;
+    padding-top: 5vh;
+    padding-left: 25vw;
+    padding-right: 25vw;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    font-family: 'Kumbh Sans', sans-serif;
 
+}
+.AboutUs-inspiration-quote p1{
+    bottom:auto;
+    justify-content: center;
+    color: white;
+    padding-top: 5vh;
+    text-align: center;
+    line-height: 1.5;
+    font-size: 1.7vw;
+}
+
+.AboutUs-inspiration-quote h1 {
+    color: white;
+    padding-top: 5vh;
+    text-align: center;
+    font-size: 2vw;
+    font-style: italic;
+    font-weight: lighter;
+}
 /* Footer */
 footer {
     text-align: center;
