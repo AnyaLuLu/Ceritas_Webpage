@@ -163,6 +163,14 @@ main {
     background: var(--ceritas-green);
 }
 
+.sparkling-dork{
+    position: absolute;
+    left: 20%;
+    top: 60%;
+    width: 15%;
+    transform: scaleX(-1);
+}
+
 .test-preview {
     position: relative;
     color: white;
@@ -391,8 +399,7 @@ main {
     position:relative;
     height: 5vh;
     width: 100%;
-    padding-bottom: 4vh;
-    
+    padding-bottom: 7vh;
 }
 .sitting-duck-button{
     background-color: var(--ceritas-standoutgreen);
@@ -406,12 +413,10 @@ main {
     font-size: 1vw;
     font-family: 'Kumbh Sans', sans-serif;
     position:absolute;
-    
-    
-
 }
+
 .sitting-duck{
-    width: 20vw;
+    width: 10vw;
     position: absolute;
     right: 20vw;
     padding-top: 10px;
