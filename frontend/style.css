@@ -61,6 +61,7 @@ button {
     transition: background-color 0.3s;
     border-radius: 30px;
     color: white;
+    width: 60%;
 }
 
 button:hover {
@@ -69,7 +70,7 @@ button:hover {
 
 main {
     text-align: center;
-    padding-bottom: 1vh;
+    min-height: 80vh;
 }
 
 /* Landing Page */
@@ -81,17 +82,20 @@ main {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    padding-bottom: 10px;
 }
 
 .landing-intro-text{
     padding-left: 10vw;
     padding-right: 15vw;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 
 .landing-intro h1{
-    width: 30vw;
+    font-size: xx-large;
+    max-width: 30vw;
 }
-
 .phone{
     width: 4%;
 }
@@ -145,7 +149,15 @@ main {
 .step3 h2{
     margin-top: 30%;
 }
-
+.sparkle-duck-steps{
+    position:absolute;
+    width: 30vw;
+    top:40%;
+    left: 3%;
+    transform: scaleX(-1);
+    padding: 10px;
+    
+}
 .circle{
     position: absolute;
     top: 20%;
@@ -325,6 +337,7 @@ main {
     color: white;
     font-size: 1vw;
     font-family: 'Kumbh Sans', sans-serif;
+    width: 100%;
 }
 .AboutUs-inspiration-container {
     text-align: center;
@@ -396,12 +409,11 @@ main {
     flex-direction: row;
     justify-content:center;
     align-items:center;
-    position:relative;
     height: 5vh;
     width: 100%;
     padding-bottom: 7vh;
 }
-.sitting-duck-button{
+.sitting-duck-btn{
     background-color: var(--ceritas-standoutgreen);
     border: none;
     padding: 12px 30px;
@@ -413,6 +425,10 @@ main {
     font-size: 1vw;
     font-family: 'Kumbh Sans', sans-serif;
     position:absolute;
+    width: 25%;
+    
+    
+
 }
 
 .sitting-duck{
@@ -426,12 +442,113 @@ main {
 /* Footer */
 footer {
     text-align: center;
-    padding: 10px 0;
+    padding: 20px 0;
     background: #2E5266; /* Same as header */
     color: white;
     bottom: 0;
     width: 100%;
+    height: 50px;
 }
+
+/* ----------------Mailing List----------------- */
+.mailing-list-container{
+    color: #ffffff;
+    text-align: center;
+    height: 60vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-around;
+}
+.mail-form-container{
+    display:flex;
+    flex-direction: column;
+    
+}
+.mail-form-container form{
+    display: flex;
+    flex-direction: column;
+    padding: 2vw 4vw;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    align-items: center;
+}
+.mail-form-container input{
+    border: 0;
+    margin: 10px;
+    padding: 20px;
+    outline: none;
+    background-color: #ffffff;
+    font-size: 16px;
+    width: 80%;
+}
+
+.mail-form-container button{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:80%;
+    font-size: 20px;
+    
+}
+
+.mail-duck{
+    width:30vw;
+    padding-right: 20px;
+    padding-left:20px;
+    transform: scaleX(-1);
+}
+
+.mail-icon{
+    
+    height: 4vh;
+    max-height: 40px;
+    padding-right: 10px;
+}
+span{
+    color: #ddd;
+}
+
+/* -------------------Contact-Us---------------------------------------------- */
+.contact-container{
+    color: #ffffff;
+    text-align: center;
+    height: 60vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-around;
+}
+
+.contact-container form{
+    display: flex;
+    flex-direction: column;
+    padding: 2vw 4vw;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    align-items: center;
+}
+.contact-container input{
+    border: 0;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px;
+    outline: none;
+    background-color: #ffffff;
+    font-size: 16px;
+    width: 80%;
+}
+.contact-container textarea{
+    height: 150px;
+    width: 80%;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 16px;
+}
+
+
 
 
 

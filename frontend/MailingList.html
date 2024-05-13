@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ceritas</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <!-- Navigation Bar -->
+        <nav class="navigation-bar">
+            <img class="logo" src="Images/CeritasLogo.png">
+            <a class = "company-name"> Ceritas </a>
+            <a href="index.html">Home</a>
+            <a href="AboutUs.html">Our Vision</a>
+            <a href="construction.html">Psychological Profile</a>
+            <a href="ContactUs.html">Contact Us</a>
+        </nav>
+    </header>
+    <main> 
+        <div class="mailing-list-container">
+            <div class="mail-form-container">
+                <form name="submit-to-google-sheet">
+                    <h1>We're currently developing a behavioural model to connect you to the support you need</h1>
+                    <h1>Sign up to become one of our first adopters!</h1>
+                    <input type="email" name="Email" placeholder="your@email.com" required>
+                    <button type="submit"> <img src="Images\Mail Icon.svg" class="mail-icon"> Sign Up</button>
+                </form> 
+                <span id="msg"></span>
+            </div>
+
+            
+            <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbz-782HSaN3D8_Pd8RiOgGQioAlGRYoXMCXKdV4Fh1IP1F3UThFniwbU-FxlNl_gs6_/exec'
+            const form = document.forms['submit-to-google-sheet']
+            const msg = document.getElementById("msg")
+            form.addEventListener('submit', e => {
+                e.preventDefault()
+                fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    msg.innerHTML = "Thank You For Subscribing!"
+                })
+                .catch(error => console.error('Error!', error.message))
+            })
+            </script>
+
+            <img class="mail-duck" src="Images\Mail Dork.svg" alt="mail duck">
+            </div>
+
+
+
+        </div>
+    </main>
+    <footer>
+        <p>Copyright © 2024</p>
+    </footer>
+</body>
+</html>

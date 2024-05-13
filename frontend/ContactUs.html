@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ceritas</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <!-- Navigation Bar -->
+        <nav class="navigation-bar">
+            <img class="logo" src="Images/CeritasLogo.png">
+            <a class = "company-name"> Ceritas </a>
+            <a href="index.html">Home</a>
+            <a href="AboutUs.html">Our Vision</a>
+            <a href="construction.html">Psychological Profile</a>
+            <a href="construction.html">Contact Us</a>
+        </nav>
+    </header>
+    <main>
+        <div class="contact-container">
+
+        
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <div class="contact-title">
+                    <h1>Suggestions, Experiences, Partnerships?
+                        <br>
+                        We want to hear from you!
+                    </h1>
+                </div>
+                <!-- Replace with your Access Key -->
+                <input type="hidden" name="access_key" value="13396c2a-b4f4-4b56-b1df-703856bb2595">
+            
+                <!-- Form Inputs. Each input must have a name="" attribute -->
+                <input type="text" name="name" placeholder="Your Name" class="input" required>
+                <input type="email" name="email" placeholder="your@email.com" class="input" required>
+                <textarea name="message" placeholder="Your Message" class="input" required></textarea>
+
+            
+                <!-- hCaptcha Spam Protection -->
+                <div class="h-captcha" data-captcha="true"></div>
+            
+                <button type="submit">Submit Form</button>
+            
+            </form>
+        </div>
+        <!-- Required for hCaptcha
+        <script src="https://web3forms.com/client/script.js" async defer></script> -->
+
+
+    </main>
+    <footer>
+        <p>Copyright © 2024</p>
+    </footer>
+</body>
+</html>
