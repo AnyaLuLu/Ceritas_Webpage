@@ -21,34 +21,20 @@
     </header>
     <main> 
         <div class="mailing-list-container">
-            
-            <form onsubmit="sendEmail()">
-                <h1>Sign up to become one of our first adopters!</h1>
-                <input type="email" id="email" placeholder="your@email.com" required>
-                <button type="submit"> <img src="Images\Mail Icon.svg" class="mail-icon"> Sign Up</button>
-            </form> 
+            <div class="mail-form-container">
+                <form>
+                    <h1>Sign up to become one of our first adopters!</h1>
+                    <input type="email" id="email" placeholder="your@email.com" required>
+                    <button type="submit"> <img src="Images\Mail Icon.svg" class="mail-icon"> Sign Up</button>
+                </form> 
+                <span>Thank You For Subscribing!</span>
+            </div>
             <img class="mail-duck" src="Images\Mail Dork.svg" alt="mail duck">
             </div>
 
 
 
         </div>
-        <script src="https://smtpjs.com/v3/smtp.js"> </script>
-        <script>
-            function sendEmail(){
-                Email.send({
-                    Host : "smtp.gmail.com",
-                    Username : "dtan3771@gmail.com",
-                    Password : "Ceritas#123",
-                    To : 'dtan3771@gmail.com',
-                    From : document.getElementById("email").value,
-                    Subject : "New Email Signup",
-                    Body : "WAHOOOOO"
-                }).then(
-                message => alert(message)
-                );
-            }
-        </script>
     </main>
     <footer>
         <p>Copyright © 2024</p>

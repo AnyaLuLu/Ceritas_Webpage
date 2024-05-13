@@ -438,8 +438,12 @@ footer {
     align-items: center;
     justify-content:space-around;
 }
-
-.mailing-list-container form{
+.mail-form-container{
+    display:flex;
+    flex-direction: column;
+    
+}
+.mail-form-container form{
     display: flex;
     flex-direction: column;
     padding: 2vw 4vw;
@@ -448,7 +452,7 @@ footer {
     border-radius: 10px;
     align-items: center;
 }
-.mailing-list-container form input{
+.mail-form-container input{
     border: 0;
     margin: 10px;
     padding: 20px;
@@ -458,7 +462,7 @@ footer {
     width: 80%;
 }
 
-.mailing-list-container form button{
+.mail-form-container button{
     display:flex;
     align-items: center;
     justify-content: center;
