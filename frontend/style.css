@@ -428,6 +428,66 @@ footer {
     width: 100%;
 }
 
+/* ----------------Mailing List----------------- */
+.mailing-list-container{
+    color: #ffffff;
+    text-align: center;
+    height: 60vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-around;
+}
+
+.mailing-list-container form{
+    display: flex;
+    flex-direction: column;
+    padding: 2vw 4vw;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    align-items: center;
+}
+.mailing-list-container form input{
+    border: 0;
+    margin: 10px;
+    padding: 20px;
+    outline: none;
+    background-color: #ffffff;
+    font-size: 16px;
+    width: 80%;
+}
+
+.mailing-list-container form button{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:80%;
+    font-size: 20px;
+    
+}
+
+.mail-duck{
+    width:30vw;
+    padding-right: 20px;
+    padding-left:20px;
+    transform: scaleX(-1);
+}
+
+.mail-icon{
+    
+    height: 4vh;
+    max-height: 40px;
+    padding-right: 10px;
+}
+
+
+
+
+
+
+
+
 
 
 /*** Progress Bar ***/
