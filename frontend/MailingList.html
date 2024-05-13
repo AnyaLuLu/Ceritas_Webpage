@@ -22,13 +22,29 @@
     <main> 
         <div class="mailing-list-container">
             <div class="mail-form-container">
-                <form>
+                <form name="submit-to-google-sheet">
                     <h1>Sign up to become one of our first adopters!</h1>
-                    <input type="email" id="email" placeholder="your@email.com" required>
+                    <input type="email" name="Email" placeholder="your@email.com" required>
                     <button type="submit"> <img src="Images\Mail Icon.svg" class="mail-icon"> Sign Up</button>
                 </form> 
-                <span>Thank You For Subscribing!</span>
+                <span id="msg"></span>
             </div>
+
+            
+            <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbz-782HSaN3D8_Pd8RiOgGQioAlGRYoXMCXKdV4Fh1IP1F3UThFniwbU-FxlNl_gs6_/exec'
+            const form = document.forms['submit-to-google-sheet']
+            const msg = document.getElementById("msg")
+            form.addEventListener('submit', e => {
+                e.preventDefault()
+                fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    msg.innerHTML = "Thank You For Subscribing!"
+                })
+                .catch(error => console.error('Error!', error.message))
+            })
+            </script>
+
             <img class="mail-duck" src="Images\Mail Dork.svg" alt="mail duck">
             </div>
 

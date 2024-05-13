@@ -484,7 +484,9 @@ footer {
     max-height: 40px;
     padding-right: 10px;
 }
-
+span{
+    color: #ddd;
+}
 
 
 
