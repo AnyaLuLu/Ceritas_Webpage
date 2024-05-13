@@ -69,13 +69,14 @@ button:hover {
 
 main {
     text-align: center;
+    padding-bottom: 1vh;
 }
 
 /* Landing Page */
 .landing-intro {
     color: #ffffff;
     text-align: center;
-    height: 80vh;
+    height: 60vh;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -381,6 +382,42 @@ main {
     font-style: italic;
     font-weight: lighter;
 }
+
+.sitting-duck-container{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    height: 5vh;
+    width: 100%;
+    padding-bottom: 4vh;
+    
+}
+.sitting-duck-button{
+    background-color: var(--ceritas-standoutgreen);
+    border: none;
+    padding: 12px 30px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 30px;
+    color: white;
+    font-size: 1vw;
+    font-family: 'Kumbh Sans', sans-serif;
+    position:absolute;
+    
+    
+
+}
+.sitting-duck{
+    width: 20vw;
+    position: absolute;
+    right: 20vw;
+    padding-top: 10px;
+}
+
+
 /* Footer */
 footer {
     text-align: center;
